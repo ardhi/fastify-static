@@ -60,6 +60,7 @@ async function fastifyStatic (fastify, opts) {
 
   // Set the schema hide property if defined in opts or true by default
   const routeOpts = {
+    config: opts.config,
     constraints: opts.constraints,
     schema: {
       hide: opts.schemaHide !== undefined ? opts.schemaHide : true
